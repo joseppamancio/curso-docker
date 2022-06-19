@@ -1,0 +1,59 @@
+### KERNEL ###
+- Kernel é uma palavra inglesa usada na computação 
+para designar o núcleo do sistema operacional, 
+que é a parte principal de um computador.
+- É responsável por conectar o software ao hardware.
+- Onde estão localzados os drivers, controle de acesso a disco,
+ controle de placa de rede.
+- Exemplo: Sys32 no Windows, Repositórios Linux
+- Faz o software player de audio se comunicar com driver de audio
+e assim o hardware de som.
+
+### DOCKER ###
+1 - É uma tecnologia de virtualização, mas não um 
+sistema de virtualização tradicional baseados em VMs.
+2 - É uma Engine de Administração de Conteiners
+3 - Baseado em Serviços LXC (Linux Containers)
+4 - Open Source desenvolvido em Go
+5 - Sistema de virtualização Baseado em Software.
+6 - Host e Container Compartilham o Kernel.
+7 - Empacota Software com vários Níveis de Isolamento
+(rede, memória, processado, arquivos)
+
+
+## CONTAINER ##
+- É um processo segregado, um processo isolado do sistema.
+Com arquivos isolados em um ambiente controlado.
+- Usa recursos da máquina host.
+- Sistemas baseados em Linux e "SOMENTE LINUX"
+- Não é possível simular Windows ou Mac
+
+## O Que São Containers? ##
+- Segregação de processos no mesmo Kernel (Isolamento)
+- Sistema de Arquivos criados a partir de uma imagem
+- Ambientes Leves e portateis no qual aplicações são executadas
+- Encapsula todos os binários e bibliotecas necesárias para execução de uma app
+- Algo entre um chroot e uma VM
+
+### DOCKER ENGINE ###
+- Forma Amigável de interagir com os Containers,
+CLI, Rest APIs, Docker Files.
+
+## DOCKER IMAGE ##
+- Modelo de Sistema de arquivo somente-leitura usado para criar Containers (Um Arquivo com Instruções)
+- São criadas através de um processo chamado build
+- São armazenadas em repostórios no Registry
+- São compostas por uma ou mais camadas (Layers)
+- Uma cama é uma ou mais mudanças no sistema de arquivos
+- Uma camada é uma imagem intermediária
+- A junção dessas camadas formam uma imagem
+- Apenas a última camada pode ser alterada quando o container or iniciado
+- AUFS (Advanced-multi-layered unification filesystem) é muito utilizado
+- Estratégias para reudo de camadas- è possível comprar imagens a partir de camadas de outras imagens.
+
+## BUILD X COMMIT ##
+- Commit não é uma boa prática, não contém arquivo com instuções de contrução da imagem
+
+## IMAGEM X CONTAINER ##
+Imagem é o Modelo
+Container é o processo gerado pela Imagem

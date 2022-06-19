@@ -1,0 +1,39 @@
+## Testando Docker ##
+docker run hello-world
+
+## Comando Run ##
+Faz internamente 4 comando:
+- doker image pull  (baixa imagem para ambiente local)
+- docker container create (criação do container)
+- docker container start (inicialização do container)
+- docker container exec (execução do container em modo interativo)
+
+## Modo Daemon ##
+- Executa o comando em modo Background (Modo primário)
+
+## Modo Interativo ##
+- Experimentos, testes e configurações dentro do container
+
+## Baixar imagem Debian ##
+docker run debian bash --version
+
+## Verificar Containers sendo executados ##
+docker container ps
+
+## Verificar Containers independendo do Status ##
+docker container ps -ambiente
+
+## Executar container e remove-lo em seguida ##
+docker run --rm debian
+
+## Acessando o terminal do container ##
+docker container run -it debian bash
+(flag 'i' é de interativo e 't' de acesso ao terminal)
+
+1 - Criando arquivo dentro do container
+touch curso-docker.txt
+
+****OBS: 'Run' sempre lançara um novo container
+
+
+----- Ultima Aula: 20 -----
